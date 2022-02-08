@@ -1,0 +1,17 @@
+---
+# this comment is a also hack
+version: '3'
+services:
+  handbrake:
+    image: jlesage/handbrake
+    ports:
+      - "5800:5800"
+    volumes:
+      - /docker/docker-compose/handbrake:/config:rw
+      - /docker/docker-compose/handbrake/storage:/storage:ro
+      - /docker/docker-compose/handbrake/watch:/watch:rw
+      - /docker/docker-compose/handbrake/output:/output:rw
+    restart: unless-stopped
+    deploy:
+      restart_policy:
+        condition: on-failure
