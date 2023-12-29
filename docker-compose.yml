@@ -3,7 +3,7 @@
 version: '3'
 services:
   handbrake:
-    image: jlesage/handbrake@sha256:1b1d83af245bb591e4b8943148c5e4fe2de21416f5a94f22fcf98c5692cbdf2b
+    image: jlesage/handbrake@sha256:7c43c9d281a2e9a9796304d578bcc9312407e1953b046b84912f55e3e49101bf
     ports:
       - "5800:5800"
     volumes:
